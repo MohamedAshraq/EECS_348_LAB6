@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Ashraq's Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mohamed Ashraq</h1>
+        <img src="https://classrooms.ku.edu/libraries/ku-web-styleguide/images/cms_metatemplate_open_graph.png" alt="KU Building" class="profile-photo">
+        
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:laban@ku.edu">laban@ku.edu</a></p>
+
+        <h2>About Me</h2>
+        <p>I am a Computer Science major with a passion for technology and software development. Currently, I am enhancing my skills through various projects and coursework.</p>
+
+        <h2>YouTube Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1XGvMuLmoak" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
