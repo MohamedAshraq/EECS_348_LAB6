@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EECS 348 LAB PRACTICE 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>EECS 348 LAB PRACTICE 3</h1>
+        <label for="password1">First Password:</label>
+        <input type="password" id="password1" required>
+        
+        <label for="password2">Second Password:</label>
+        <input type="password" id="password2" required>
+        
+        <button onclick="verifyPassword()">Submit</button>
+    </div>
+
+    <script>
+        function verifyPassword() {
+            const password1 = document.getElementById('password1').value;
+            const password2 = document.getElementById('password2').value;
+
+            if (password1.length < 8) {
+                alert("Password must be at least 8 characters long.");
+            } else if (password1 !== password2) {
+                alert("Passwords do not match.");
+            } else {
+                alert("Passwords match!");
+            }
+        }
+    </script>
+</body>
+</html>
