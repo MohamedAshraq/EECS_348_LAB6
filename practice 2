@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #color-box {
+            border: 2px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Change the Color!</h1>
+        <p id="color-box">Paragraph to be altered.</p>
+
+        <h2>Border Color</h2>
+        <label for="border-r">Border R (0-255):</label>
+        <input type="text" id="border-r" maxlength="3>
+        <br>
+        <label for="border-g">Border G (0-255):</label>
+        <input type="text" id="border-g" maxlength="3>
+        <br>
+        <label for="border-b">Border B (0-255):</label>
+        <input type="text" id="border-b" maxlength="3>
+        <br>
+        <label for="border-width">Border Width:</label>
+        <input type="text" id="border-width" value="2">
+        <br>
+
+        <h2>Background Color</h2>
+        <label for="bg-r">Background R (0-255):</label>
+        <input type="text" id="bg-r" maxlength="3>
+        <br>
+        <label for="bg-g">Background G (0-255):</label>
+        <input type="text" id="bg-g" maxlength="3>
+        <br>
+        <label for="bg-b">Background B (0-255):</label>
+        <input type="text" id="bg-b" maxlength="3>
+        <br>
+
+        <button onclick="changeColor()">Apply</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            // Get border color values
+            const borderR = document.getElementById('border-r').value;
+            const borderG = document.getElementById('border-g').value;
+            const borderB = document.getElementById('border-b').value;
+            const borderWidth = document.getElementById('border-width').value;
+
+            // Get background color values
+            const bgR = document.getElementById('bg-r').value;
+            const bgG = document.getElementById('bg-g').value;
+            const bgB = document.getElementById('bg-b').value;
+
+            // Set colors
+            const borderColor = `rgb(${borderR}, ${borderG}, ${borderB})`;
+            const backgroundColor = `rgb(${bgR}, ${bgG}, ${bgB})`;
+            const colorBox = document.getElementById('color-box');
+
+            // Apply styles
+            colorBox.style.borderColor = borderColor;
+            colorBox.style.borderWidth = borderWidth + 'px';
+            colorBox.style.backgroundColor = backgroundColor;
+        }
+    </script>
+</body>
+</html>
